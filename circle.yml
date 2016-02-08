@@ -9,7 +9,7 @@ dependencies:
 
 test:
   override:
-    - docker run -d -p 8080:80 roylines/docker:latest
+    - docker run -d -p 8080:80 roylines/nginx:latest
     - sleep 10
     - curl --retry 10 --retry-delay 5 -v http://localhost:8080
 
@@ -18,4 +18,4 @@ deployment:
     branch: xmaster
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push roylines/docker
+      - docker push roylines/nginx
