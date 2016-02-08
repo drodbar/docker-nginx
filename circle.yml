@@ -5,7 +5,7 @@ dependencies:
   override:
     - docker info
     - docker build -t roylines/nginx:latest .
-    - docker tag roylines/nginx:latest roylines:nginx:$CIRCLE_BUILD_NUM
+    - docker tag roylines/nginx:latest roylines/nginx:$CIRCLE_BUILD_NUM
 
 test:
   override:
