@@ -1,8 +1,7 @@
 FROM alpine
 MAINTAINER Roy Lines <https://roylines.co.uk>
 
-RUN apk add --update nginx
-RUN rm -rf /var/cache/apk/*
+RUN apk --no-cache add nginx
 
 RUN rm -rf /etc/nginx/*
 RUN rm -rf /usr/share/nginx
